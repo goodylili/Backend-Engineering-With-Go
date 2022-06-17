@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func SelectDinner() {
 	myDinner := []string{
 		"fufu and egusi",
 		"chicken and chips",
