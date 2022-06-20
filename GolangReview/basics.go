@@ -15,8 +15,8 @@ import (
 //	c float64
 //)
 
-// structs
-// used for reading and writing data formats, and for grouping associative data
+// structs: used for reading and writing data formats, and for grouping associative data
+
 type PersonalID struct {
 	name   string
 	number int
@@ -24,12 +24,17 @@ type PersonalID struct {
 	isMale bool
 }
 
-// anonymous structs are used in table-driven tests
-
 type PersonID struct {
 	Name  string `json:"name"`
 	Email string `json:"email"`
 }
+
+// anonymous structs are used in table-driven tests
+
+/* Operators: are of 5 types
+- arithmetic	- logical	- address
+- comparison	- receive
+*/
 
 func main() {
 	person1 := PersonalID{
