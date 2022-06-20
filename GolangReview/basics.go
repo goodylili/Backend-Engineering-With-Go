@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+)
 
 // Naming variables (same as constants)
 //var x int
@@ -11,11 +15,18 @@ import "fmt"
 //	c float64
 //)
 
+// structs
+// used for reading and writing data formats, and for grouping associative data
 type PersonalID struct {
 	name   string
 	number int
 	age    int
 	isMale bool
+}
+
+type PersonID struct {
+	Name  string `json:"name"`
+	Email string `json:"email"`
 }
 
 func main() {
@@ -25,6 +36,15 @@ func main() {
 		15,
 		true,
 	}
-
 	fmt.Println("First candidate: ", person1)
+
+	newPerson := PersonID{
+		"MacBobby",
+		"theghostmac@gmail.com",
+	}
+	marsh, err := json.Marshal(newPerson)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(string(marsh))
 }
