@@ -24,6 +24,8 @@ type PersonalID struct {
 	isMale bool
 }
 
+// anonymous structs are used in table-driven tests
+
 type PersonID struct {
 	Name  string `json:"name"`
 	Email string `json:"email"`
