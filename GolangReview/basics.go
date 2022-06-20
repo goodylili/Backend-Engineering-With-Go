@@ -49,4 +49,17 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(string(marsh))
+
+	anotherPerson := struct {
+		Name  string `json:"name"`
+		Email string `json:"email"`
+	}{
+		Name:  "Chibuzor",
+		Email: "macbobbychibuzor@gmaill.com",
+	}
+	anotherMarsh, err := json.Marshal(anotherPerson)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(string(anotherMarsh))
 }
