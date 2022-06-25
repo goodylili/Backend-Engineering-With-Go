@@ -75,5 +75,5 @@ func main() {
 	fmt.Println(x, y, z, d)
 
 	// typed constants can only be assigned to int data type
-	const typedX int = 15
+	//const typedX int = 15
 }
