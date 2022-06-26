@@ -18,6 +18,7 @@ var multi = [3][3]int{}
 // operations include
 // - len   -append   -cap	-make
 // create an empty slice with pre-specified length or capacity using ```make```
+// use make when you know how large you need the slice to be but don't know the values to populate with
 
 func main() {
 	// test arrays
@@ -38,4 +39,8 @@ func main() {
 	predef[4] = 5
 	predef = append(predef, 6, 7)
 	fmt.Println(predef)
+
+	receiverSlice := make([]int, 6)
+	newSlice := copy(receiverSlice, predef)
+	fmt.Println(receiverSlice, newSlice)
 }
