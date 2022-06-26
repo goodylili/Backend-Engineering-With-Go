@@ -70,4 +70,9 @@ func main() {
 		"Kittens": 11,
 	}
 	fmt.Println(totalWins)
+	// another method of writing maps is to populate a nil map by indexing
+	nilMap["Club 1"] = 13
+	nilMap["Club 2"] = 14
+	nilMap["Club 3"] = 16
+	fmt.Println(nilMap)
 }
