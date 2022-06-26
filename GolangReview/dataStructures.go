@@ -64,6 +64,7 @@ func main() {
 
 	// maps
 	fmt.Println(nilMap)
+
 	totalWins := map[string]int{
 		"Orcas":   10,
 		"Lions":   12,
@@ -71,8 +72,16 @@ func main() {
 	}
 	fmt.Println(totalWins)
 	// another method of writing maps is to populate a nil map by indexing
-	nilMap["Club 1"] = 13
-	nilMap["Club 2"] = 14
-	nilMap["Club 3"] = 16
-	fmt.Println(nilMap)
+	//nilMap["Club 1"] = 13
+	//nilMap["Club 2"] = 14
+	//nilMap["Club 3"] = 16
+	//fmt.Println(nilMap)
+
+	// the comma, ok idiom
+	vOrcas, ok := totalWins["Orcas"]
+	fmt.Println(vOrcas, ok)
+	vUnav, ok := totalWins["UnavailableKey"]
+	fmt.Println(vUnav, ok)
+	// deleting from maps
+	delete(totalWins, "Kittens")
 }
