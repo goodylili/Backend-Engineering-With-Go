@@ -84,4 +84,11 @@ func main() {
 	fmt.Println(vUnav, ok)
 	// deleting from maps
 	delete(totalWins, "Kittens")
+
+	intSet := map[int]bool{}
+	values := []int{5, 10, 2, 5, 8, 7, 3, 9, 1, 2, 10}
+	for _, v := range values {
+		intSet[v] = true
+	}
+	fmt.Println(len(values), len(intSet))
 }
