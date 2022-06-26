@@ -26,6 +26,11 @@ var s string = "Hello there"
 var b byte = s[6]
 
 // slicing and indexing also works for strings. only use it when your string contains characters using one byte
+// most data in Go are read and written in bytes. type conversion of strings to byte slices are common.
+
+// maps
+// maps are used to associate one value with another.
+var nilMap map[string]int
 
 func main() {
 	// test arrays
@@ -56,4 +61,13 @@ func main() {
 	var runeOfStringS []rune = []rune(s)
 	fmt.Println(byteOfStringS)
 	fmt.Println(runeOfStringS)
+
+	// maps
+	fmt.Println(nilMap)
+	totalWins := map[string]int{
+		"Orcas":   10,
+		"Lions":   12,
+		"Kittens": 11,
+	}
+	fmt.Println(totalWins)
 }
