@@ -20,6 +20,13 @@ var multi = [3][3]int{}
 // create an empty slice with pre-specified length or capacity using ```make```
 // use make when you know how large you need the slice to be but don't know the values to populate with
 
+// strings
+// strings are sequences of utf-8 bytes
+var s string = "Hello there"
+var b byte = s[6]
+
+// slicing and indexing also works for strings. only use it when your string contains characters using one byte
+
 func main() {
 	// test arrays
 	fmt.Println(x)
@@ -43,4 +50,6 @@ func main() {
 	receiverSlice := make([]int, 6)
 	newSlice := copy(receiverSlice, predef)
 	fmt.Println(receiverSlice, newSlice)
+
+	fmt.Println(s, b)
 }
