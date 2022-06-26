@@ -52,4 +52,8 @@ func main() {
 	fmt.Println(receiverSlice, newSlice)
 
 	fmt.Println(s, b)
+	var byteOfStringS []byte = []byte(s)
+	var runeOfStringS []rune = []rune(s)
+	fmt.Println(byteOfStringS)
+	fmt.Println(runeOfStringS)
 }
