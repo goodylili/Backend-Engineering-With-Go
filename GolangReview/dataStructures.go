@@ -29,7 +29,7 @@ var b byte = s[6]
 // most data in Go are read and written in bytes. type conversion of strings to byte slices are common.
 
 // maps
-// maps are used to associate one value with another.
+// Go's map is actually a hash map. maps are used to associate one value with another.
 var nilMap map[string]int
 
 func main() {
