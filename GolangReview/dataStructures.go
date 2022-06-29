@@ -100,4 +100,13 @@ func main() {
 		intSet[v] = true
 	}
 	fmt.Println(len(values), len(intSet))
+
+	// trader portfolio
+	InvestorMac := Trader{
+		name:        "MacBobby Chibuzor",
+		ID:          117,
+		numOfAssets: 4,
+		portfolio:   []string{"stocks", "real estate", "ETFs", "cryptocurrencies"},
+	}
+
 }
