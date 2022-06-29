@@ -32,6 +32,15 @@ var b byte = s[6]
 // Go's map is actually a hash map. maps are used to associate one value with another.
 var nilMap map[string]int
 
+// structs
+// structs are used to group related data.
+type Trader struct {
+	name        string
+	ID          int
+	numOfAssets int
+	portfolio   []string
+}
+
 func main() {
 	// test arrays
 	fmt.Println(x)
