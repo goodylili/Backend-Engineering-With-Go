@@ -17,3 +17,7 @@ func SelectDinner() {
 	rand.Seed(time.Now().Unix())
 	fmt.Printf("I had %s for dinner tonight!", myDinner[rand.Intn(len(myDinner))])
 }
+
+func main() {
+	SelectDinner()
+}

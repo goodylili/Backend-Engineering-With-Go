@@ -109,4 +109,6 @@ func main() {
 		portfolio:   []string{"stocks", "real estate", "ETFs", "cryptocurrencies"},
 	}
 
+	fmt.Println(InvestorMac)
+	 
 }
