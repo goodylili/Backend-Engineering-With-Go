@@ -17,4 +17,13 @@ func main() {
 		}
 		fmt.Println(i)
 	}
+
+	// Range through string with for
+	stringSample := []string{"This is", "a long string here."}
+	for _, rangeString := range stringSample {
+		for i, r := range rangeString {
+			fmt.Println(i, r, string(r))
+		}
+		fmt.Println()
+	}
 }
