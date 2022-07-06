@@ -3,9 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	i := 1
-	for i < 100 {
+	// FizzBuzz Algorithm
+	for i := 1; i <= 100; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Println("FizzBuzz")
+			continue
+		} else if i%5 == 0 {
+			fmt.Println("Fizz")
+			continue
+		} else {
+			fmt.Println("Buzz")
+			continue
+		}
 		fmt.Println(i)
-		i = i * 2
 	}
 }
