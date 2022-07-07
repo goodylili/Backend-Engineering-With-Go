@@ -29,7 +29,9 @@ func divide(x, y int) int {
 	}
 }
 
-var operatorMap = map[string]func(int, int) int{
+type operatorFuncType func(int, int) int
+
+var operatorMap = map[string]operatorFuncType{
 	"+": add,
 	"-": subtract,
 	"*": multiply,
