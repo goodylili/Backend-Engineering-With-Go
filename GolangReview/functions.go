@@ -30,4 +30,6 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Println(res, remainder)
+
+	// use underscore to ignore values
 }
