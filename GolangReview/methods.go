@@ -13,5 +13,11 @@ func (p Person) personString() string {
 }
 
 func main() {
-
+	customer := Person{
+		"Fredrick",
+		"Nietzche",
+		48,
+	}
+	output := customer.personString()
+	fmt.Println(output)
 }
