@@ -8,16 +8,17 @@ type Person struct {
 	age       int
 }
 
-func (p Person) personString() string {
-	return fmt.Sprintf("%s %s of age %d", p.firstName, p.lastName, p.age)
+func (p Person) customerData() string {
+	return fmt.Sprintf("Customer name: %s %s. Customer age: %d", p.firstName, p.lastName, p.age)
 }
 
 func main() {
-	customer := Person{
-		"Fredrick",
-		"Nietzche",
-		48,
+	customer1 := Person{
+		"Bryan",
+		"Goldings",
+		47,
 	}
-	output := customer.personString()
-	fmt.Println(output)
+
+	feedData := customer1.customerData()
+	fmt.Println(feedData)
 }
