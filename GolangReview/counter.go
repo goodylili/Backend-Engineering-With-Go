@@ -1,13 +1,27 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 type Counter struct {
 	total       int
 	lastUpdated time.Time
 }
 
-func (c Counter) Increment() {
+func (c *Counter) Increment() {
 	c.total++
-	c.lastUpdated
+	c.lastUpdated = time.Now()
+}
+
+func (c Counter) MakeString() string {
+	return fmt.Sprintf("total: %d, last updated: %v", c.total, c.lastUpdated)
+}
+
+func main() {
+	var c Counter
+	fmt.Println(c.MakeString())
+	c.Increment()
+	fmt.Println(c.MakeString())
 }
