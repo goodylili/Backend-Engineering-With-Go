@@ -17,3 +17,16 @@ func (intTree *IntTree) Insert(value int) *IntTree {
 	}
 	return intTree
 }
+
+func (intTree *IntTree) Contains(value int) bool {
+	switch {
+	case intTree = nil:
+		return false
+	case value < intTree.value:
+		return intTre.left.Contains(value)
+	case value > intTree.value:
+		return intTree.right.Contains(value)
+	default:
+		return true
+	}
+}
