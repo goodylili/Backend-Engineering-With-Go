@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type IntTree struct {
 	value int
 	left  *IntTree
@@ -20,13 +22,24 @@ func (intTree *IntTree) Insert(value int) *IntTree {
 
 func (intTree *IntTree) Contains(value int) bool {
 	switch {
-	case intTree = nil:
+	case intTree == nil:
 		return false
 	case value < intTree.value:
-		return intTre.left.Contains(value)
+		return intTree.left.Contains(value)
 	case value > intTree.value:
 		return intTree.right.Contains(value)
 	default:
 		return true
 	}
+}
+
+func main() {
+	var intTree *IntTree
+	intTree = intTree.Insert(5)
+	intTree = intTree.Insert(3)
+	intTree = intTree.Insert(10)
+	intTree = intTree.Insert(2)
+	intTree = intTree.Insert(4)
+	fmt.Println(intTree.Contains(2))
+	fmt.Println(intTree.Contains(12))
 }
