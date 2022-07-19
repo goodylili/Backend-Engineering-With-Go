@@ -27,8 +27,20 @@ on the name of the table or what data is represented in it. It is advisable to u
 systems can make use of a _compound key_ (a primary key consisting of two or more columns like `firstName` and `lastName`.) if you are certain that no two
 customers of the bank can bear the same first and last names. In database engineering terms, customer IDs are called _surrogate keys_ and the first/last names are called
 _natural keys_.
+
 Some columns make use of the primary key; they are known as _foreign keys_ and are used to identify what data is related to what customer. In database engineering
 terms, this process is known as a _join_.
+
+The general definitions for common database engineering terminologies include:
+- entity: a property in the database e.g. customers, parts, addresses, etc.
+- column: an individual piece of data stored in a table
+- row: a set of columns that describe an entity (called a record)
+- table: a set of rows held in memory (non-persistent) or on permanent storage (persistent)
+- result set: another name for a non-persistent table, the result of an SQL query
+- primary key: column(s) that is used as a unique identifier for each row in the table
+- foreign key: column(s) that is used together to identify a single row in another table
+
+
 
 # Test Your Knowledge
 1. What kind of databases are the most complex?
