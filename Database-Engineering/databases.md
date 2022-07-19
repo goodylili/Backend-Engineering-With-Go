@@ -40,6 +40,38 @@ The general definitions for common database engineering terminologies include:
 - primary key: column(s) that is used as a unique identifier for each row in the table
 - foreign key: column(s) that is used together to identify a single row in another table
 
+## SQL in Relational Database Model
+SQL works perfectly with the relational databases model because the result of an SQL query (called the result set) is a table. Hence, storing the result set of the 
+query creates a new table in a relational database. SQL does not mean "Structured Query Language." The SQL language has several distinct parts. The important parts in 
+database engineering include:
+- SQL schema statements: used to define the data structures stored in a database. An example of this include using the `create table` statement to create a new table.
+- SQL data statements: used to manipulate the data structures defined by the schema statements. An example is the process of populating a new table.
+- SQL transaction statements: used to begin, end, and roll back transactions
+
+## Using SQL STATEMENTS
+Let's look at an example where these statements are adopted. To create a table, the statement is similar to:
+```sql
+CREATE TABLE  company
+(
+    company_id SMALLINT ,
+    company_name VARCHAR(30),
+    CONSTRAINT pk_company PRIMARY KEY (company_id)
+);
+```
+Next, let us uses a data statement to insert a row into the table above:
+```sql
+INSERT INTO company (company_id, company_name)
+VALUES (0007, 'MacKie Groups');
+```
+Finally, let us retrieve data from the table created:
+```sql
+mysql < SELECT company_name
+    -> FROM company
+    -> WHERE company_id = 0007;
+```
+
+
+
 
 
 # Test Your Knowledge
