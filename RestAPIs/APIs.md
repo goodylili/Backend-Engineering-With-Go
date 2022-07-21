@@ -16,3 +16,9 @@ three components:
 - header
 - body
 
+SOAP APIs are best used in fintech solutions as they are more secure.
+
+## REST API
+REST is more simplified and lightweight than SOAP. It is performant, scalable, portable, flexible, etc. 
+Characteristics of RESTFul Services include:
+- it uses client-server based architecture
