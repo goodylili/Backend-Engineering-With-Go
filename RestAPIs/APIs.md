@@ -22,3 +22,27 @@ SOAP APIs are best used in fintech solutions as they are more secure.
 REST is more simplified and lightweight than SOAP. It is performant, scalable, portable, flexible, etc. 
 Characteristics of RESTFul Services include:
 - it uses client-server based architecture
+- it is stateless; once a request is served, the server removes it from memory, hence it's a stateless operation
+- it is cacheable; responses are cached for better throughput
+- resources are represented properly
+- there is freedom of implementing any web service pattern you want using rest.
+
+REST API is made of three components:
+- the REST verb
+- header information
+- body (optional)
+
+The verbs include:
+- GET: fetch resource from the server
+- OPTIONS: fetch all REST operations available
+- POST: create new resource
+- PUT: update/replace resource
+- PATCH: modify resource
+- DELETE: delete resource
+
+These verbs have status codes. They include:
+
+- Success: 200 - 226
+- Error: 400 - 499 for client and 500 - 599 for server
+- Redirect: 300- 308
+
