@@ -46,3 +46,7 @@ These verbs have status codes. They include:
 - Error: 400 - 499 for client and 500 - 599 for server
 - Redirect: 300- 308
 
+## Cross-Origin Resource Sharing (CORS)
+CORS is the most important application of OPTIONS method. When a client requests OPTIONS method from a server, the 
+server grants it access. Then the client can call a GET method to receive resource from the client, while the server 
+responds with an OK.
