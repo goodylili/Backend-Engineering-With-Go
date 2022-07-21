@@ -50,3 +50,11 @@ These verbs have status codes. They include:
 CORS is the most important application of OPTIONS method. When a client requests OPTIONS method from a server, the 
 server grants it access. Then the client can call a GET method to receive resource from the client, while the server 
 responds with an OK.
+
+## SPAs and REST APIs
+Most modern JavaScript frameworks are MVC: Angular, React, Vue... They only implement one design patter: no requesting 
+of web pages, only REST API usage. Developers follow a particular method of writing code while working with REST APIs:
+- request the HTML templates with the browser in one go
+- query the JSON REST API to fill a model (the data object)
+- adjust the UI accordingly in JSON
+- push back the changes to the server via API call
