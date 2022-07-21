@@ -10,8 +10,8 @@ import (
 )
 
 type response struct {
-	FastestURL string        `json:"fastest_url"`
-	Latency    time.Duration `json:"latency"`
+	FastestURL string        `json:"fastest_url"` // url for fastest mirror site
+	Latency    time.Duration `json:"latency"`     // time taken to download the README from Debian repository
 }
 
 func main() {
@@ -35,5 +35,20 @@ func main() {
 }
 
 func findFastest(urls [...]string) response {
+	urlChannel := make(chan string)
+	latencyChannel := make(chan time.Duration)
 
+	for _, url := range urls {
+		mirrorURL := url
+		go func() {
+			start := time.Now()
+			_, err := http.Get(mirrorURL + "/README")
+			latency := time.Now().Sub(start) / time.Millisecond
+			if err == nil {
+				urlChannel <- mirrorURL
+				latencyChannel <- latency
+			}
+		}()
+	}
+	return response{<-urlChannel, <-latencyChannel}
 }
