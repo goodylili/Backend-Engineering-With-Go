@@ -34,7 +34,7 @@ func main() {
 	log.Fatal(server.ListenAndServe())
 }
 
-func findFastest(urls [...]string) response {
+func findFastest(urls []string) response {
 	urlChannel := make(chan string)
 	latencyChannel := make(chan time.Duration)
 
