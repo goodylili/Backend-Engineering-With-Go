@@ -1,4 +1,4 @@
-package mirrorFinder
+package main
 
 import (
 	"encoding/json"
@@ -30,7 +30,7 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 
-	fmt.Printf("Starting server on port %sn", port)
+	fmt.Printf("Starting server on port %s", port)
 	log.Fatal(server.ListenAndServe())
 }
 
