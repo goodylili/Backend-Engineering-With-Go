@@ -45,3 +45,11 @@ if length() == 0 {
 }
 }
 ```
+
+
+
+
+## Recursion and Backtracking
+A function which calls itself is recursive. A recursive method solves a problem by calling a copy of itself to solve a smaller problem.
+Recursion is useful in sort, search, traversal... any task that can be split into similar subtasks.
+

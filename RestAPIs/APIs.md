@@ -58,3 +58,14 @@ of web pages, only REST API usage. Developers follow a particular method of writ
 - query the JSON REST API to fill a model (the data object)
 - adjust the UI accordingly in JSON
 - push back the changes to the server via API call
+
+An example of an API is the DebianMirrorsFinder API. 
+
+## Open API / Swagger
+OpenAPI Spec (called Swagger) is an API description format for REST APIs in YAML an JSON. It includes:
+- available endpoints
+- endpoint operations (GET, PUT, etc)
+- parameter input and output for each operation
+- authentication methods
+- contact info, license, terms etc
+
