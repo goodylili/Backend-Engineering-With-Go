@@ -22,7 +22,7 @@ func main() {
 		writer.Header().Set("Content-Type", "application/json")
 		writer.Write(repsJSON)
 	})
-	port := ":8080"
+	port := ":8000"
 	server := &http.Server{
 		Addr:           port,
 		ReadTimeout:    10 * time.Second,
