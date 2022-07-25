@@ -108,9 +108,9 @@ This can be store as a fixed-length or variable-length strings. Whichever you us
 of the string to be stored in the column. Example:
 ```sql
 char(20) /* fixed length */
-varchar(30) /* variable length */
+varchar(20) /* variable length */
 ```
-
+These are not nice for storing longer strings like emails and XML documents. Instead, `text` types are used. 
 
 
 # Test Your Knowledge
