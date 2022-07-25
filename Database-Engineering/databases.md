@@ -70,7 +70,32 @@ mysql < SELECT company_name
     -> WHERE company_id = 0007;
 ```
 
+## More SQL Statements
+1. SELECT
+`SELECT` retrieves one or more rows from one or more tables. Example:
+```sql
+SELECT first_name, last_name FROM contacts;
+```
 
+2. INSERT
+INSERT adds one or more rows into a table. Example:
+```sql
+INSERT INTO contacts (first_name, last_name) VALUES ('MacBobby', 'Chibuzor');
+```
+Id columns are auto-incrementing columns in database engineering.
+
+3. UPDATE
+UPDATE modifies one or more rows in a table. Example:
+```sql
+UPDATE contacts SET first_name = 'GhostMac' WHERE id = 1;
+```
+If the WHERE clause is omitted, every row becomes updated to fit.
+
+4. DELETE
+DELETE removes one or more rows from a table. Example:
+```sql
+DELETE FROM contacts WHERE id = 2;
+```
 
 
 
