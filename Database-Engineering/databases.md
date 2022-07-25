@@ -48,6 +48,9 @@ database engineering include:
 - SQL data statements: used to manipulate the data structures defined by the schema statements. An example is the process of populating a new table.
 - SQL transaction statements: used to begin, end, and roll back transactions
 
+It is advisable for backend engineers to be proficient with [MySQL](https://dev.mysql.com/downloads/mysql/8.0.html) and [PostgresSQL](https://www.postgresql.org/download/) 
+syntax, as well as relevant cloud native database servers if they so desire.
+
 ## Using SQL STATEMENTS
 Let's look at an example where these statements are adopted. To create a table, the statement is similar to:
 ```sql
@@ -97,9 +100,21 @@ DELETE removes one or more rows from a table. Example:
 DELETE FROM contacts WHERE id = 2;
 ```
 
+## MySQL Data Types
+Data are stored in databases using special data types. They might be strings, dates, or numbers. Special differences are
+in XML or JSON documents. 
+### Character Data type
+This can be store as a fixed-length or variable-length strings. Whichever you use, you must specify the maximum size 
+of the string to be stored in the column. Example:
+```sql
+char(20) /* fixed length */
+varchar(30) /* variable length */
+```
+
 
 
 # Test Your Knowledge
 1. What kind of databases are the most complex?
 2. What is a surrogate key?
-3. 
+3. One of the following is not an SQL statement:
+   (a). 
